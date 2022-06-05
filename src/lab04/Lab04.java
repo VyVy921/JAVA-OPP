@@ -49,13 +49,18 @@ public class Lab04 {
                     break;
                 case 4:
                     System.out.println("Search your number ");
-                    int userSearch = getUserNumber();
+                    int userSearchNumber = getUserNumber();
+                    boolean isNumberExisting = false;
                     for (int index = 0; index < listSize; index++) {
-                        if (userSearch == myList.get(index)) {
-                            System.out.println("Your number " + userSearch + " is existing in arraylist");
+                        if (userSearchNumber == myList.get(index)) {
+                            System.out.println("Your number " + userSearchNumber + " is existing in arraylist");
+                            isNumberExisting = true;
                             break;
-                        } else
-                            System.out.println("Number is not in the list");
+                        } else if (userSearchNumber != myList.get(index))
+                            continue;
+                    }
+                    if (!isNumberExisting) {
+                        System.out.println("Your number is not existing ");
                     }
                     break;
                 default:
