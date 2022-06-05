@@ -60,7 +60,7 @@ public class Lab04 {
                             continue;
                     }
                     if (!isNumberExisting) {
-                        System.out.println("Your number is not existing ");
+                        System.out.printf("Your number '%d' is not existing in the list", userSearchNumber);
                     }
                     break;
                 default:
