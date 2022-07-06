@@ -3,7 +3,7 @@ package lab07_2;
 
 public class Animal {
 
-    private int maxSpeed;
+    private  int maxSpeed;
     private String animalName;
 
     public Animal() {
@@ -25,7 +25,8 @@ public class Animal {
     @Override
     public String toString() {
         return "Animal{" +
-                "animalName='" + animalName + '\'' +
+                "maxSpeed=" + maxSpeed +
+                ", animalName='" + animalName + '\'' +
                 '}';
     }
 }

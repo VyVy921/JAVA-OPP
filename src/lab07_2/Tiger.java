@@ -6,7 +6,7 @@ public class Tiger extends Animal {
 
     @Override
     public final int getMaxSpeed() {
-        int random = new SecureRandom().nextInt(70);
+        final int random = new SecureRandom().nextInt(70);
         return random;
     }
 

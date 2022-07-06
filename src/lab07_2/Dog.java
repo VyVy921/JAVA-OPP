@@ -5,7 +5,7 @@ import java.security.SecureRandom;
 public class Dog extends Animal {
     @Override
     public final int getMaxSpeed() {
-       int random = new SecureRandom().nextInt(50);
+        final int random = new SecureRandom().nextInt(50);
         return random;
     }
 

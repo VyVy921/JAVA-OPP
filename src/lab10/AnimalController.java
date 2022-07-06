@@ -15,17 +15,14 @@ public class AnimalController {
     }
 
     public void findMaxSpeed(List<Animal> animalList) {
-
-        int maxSpeed = animalList.get(0).getMaxSpeed();
-        String name = animalList.get(0).getAnimalName();
+        Animal initWinner = animalList.get(0);
 
         for (int index = 0; index < animalList.size(); index++) {
-            if (animalList.get(index).getMaxSpeed() >= maxSpeed) {
-                maxSpeed = animalList.get(index).getMaxSpeed();
-                name = animalList.get(index).getAnimalName();
+            if (animalList.get(index).getMaxSpeed() >= animalList.get(0).getMaxSpeed()) {
+                initWinner = animalList.get(index);
             } else continue;
         }
-        System.out.println("Max speed: " + maxSpeed + " is " + name);
+        System.out.printf("Winner is '%s' with speed: %d ", initWinner.getAnimalName(), initWinner.getMaxSpeed());
+
     }
 }
-

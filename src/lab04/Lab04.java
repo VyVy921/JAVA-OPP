@@ -70,6 +70,7 @@ public class Lab04 {
             }
         }
     }
+
     private static void printMenu() {
         System.out.println("\n ======Menu====== ");
         System.out.println("1. Print all numbers");
@@ -77,13 +78,16 @@ public class Lab04 {
         System.out.println("3. Print minimum value");
         System.out.println("4. Search number");
     }
+
     private static int getUserNumber() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Please input a number: ");
         return scanner.nextInt();
     }
+
     public static int getRandomNumber(int boundaryNumber) {
         int randomNumber = new SecureRandom().nextInt(boundaryNumber);
         return randomNumber;
     }
+
 }
